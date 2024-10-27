@@ -22,16 +22,16 @@ const elementos = {
     }
 }
 
-Cypress.Commands.add('novoCadastroUsuarioAdm', (name, email, password) => { 
+Cypress.Commands.add('novoCadastroUsuarioAdm', (nome, email, senha) => { 
     cy.get(elementos.formulario.campoNome)
         .should('be.visible')
-        .type(name)
+        .type(nome)
     cy.get(elementos.formulario.campoEmail)
         .should('be.visible')
         .type(email)
     cy.get(elementos.formulario.campoSenha)
         .should('be.visible')
-        .type(password)
+        .type(senha)
     cy.get(elementos.botoes.checkBoxAdm)
         .should('be.visible')
         .click()
@@ -43,16 +43,16 @@ Cypress.Commands.add('novoCadastroUsuarioAdm', (name, email, password) => {
         .contains(elementos.spam.validaSpamConfirmacao)
 })
 
-Cypress.Commands.add('novoCadastroUsuario', (name, email, password) => { 
+Cypress.Commands.add('novoCadastroUsuario', (nome, email, senha) => { 
     cy.get(elementos.formulario.campoNome)
         .should('be.visible')
-        .type(name)
+        .type(nome)
     cy.get(elementos.formulario.campoEmail)
         .should('be.visible')
         .type(email)
     cy.get(elementos.formulario.campoSenha)
         .should('be.visible')
-        .type(password)
+        .type(senha)
     cy.get(elementos.botoes.botaoCadastrar)
         .should('be.visible')
         .click()
@@ -61,19 +61,19 @@ Cypress.Commands.add('novoCadastroUsuario', (name, email, password) => {
         .contains(elementos.spam.validaSpamConfirmacao)
 })
 
-Cypress.Commands.add('cadastroUsuarioLogadoAdm', (name, email, password) => { 
+Cypress.Commands.add('cadastroUsuarioLogadoAdm', (nome, email, senha) => { 
     cy.get(elementos.botoes.botaoCadastrarLogado)
         .should('be.visible')
         .click()
     cy.get(elementos.formulario.campoNome)
         .should('be.visible')
-        .type(name)
+        .type(nome)
     cy.get(elementos.formulario.campoEmail)
         .should('be.visible')
         .type(email)
     cy.get(elementos.formulario.campoSenha)
         .should('be.visible')
-        .type(password)
+        .type(senha)
     cy.get(elementos.botoes.checkBoxAdm)
         .should('be.visible')
         .click()
@@ -82,19 +82,19 @@ Cypress.Commands.add('cadastroUsuarioLogadoAdm', (name, email, password) => {
         .click()
 })
 
-Cypress.Commands.add('cadastroUsuarioLogado', (name, email, password) => { 
+Cypress.Commands.add('cadastroUsuarioLogado', (nome, email, senha) => { 
     cy.get(elementos.botoes.botaoCadastrarLogado)
         .should('be.visible')
         .click()
     cy.get(elementos.formulario.campoNome)
         .should('be.visible')
-        .type(name)
+        .type(nome)
     cy.get(elementos.formulario.campoEmail)
         .should('be.visible')
         .type(email)
     cy.get(elementos.formulario.campoSenha)
         .should('be.visible')
-        .type(password)
+        .type(senha)
     cy.get(elementos.botoes.botaoCadastrarUsuarioLogado)
         .should('be.visible')
         .click()

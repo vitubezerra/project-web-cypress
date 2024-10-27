@@ -5,10 +5,10 @@ module.exports = defineConfig({
     reporter: 'cypress-mochawesome-reporter',
     reporterOptions: {
       charts: true,
-      reportTitle: 'Projeto-web-ambev',
-      reportPageTitle: 'Projeto-web-ambev2',
+      reportTitle: 'Projeto-web-cypress',
+      reportPageTitle: 'Projeto-web-cypress',
       reportDir: 'cypress/reports',
-      overwrite: false,
+      overwrite: true,
       html: true,
       json: true,
     },

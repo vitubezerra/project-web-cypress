@@ -1,6 +1,14 @@
 # Projeto de Automação com Cypress
 
-Este projeto utiliza o Cypress para automação de testes em aplicações web. O objetivo é garantir a qualidade e a confiabilidade do sistema, executando testes de forma automatizada.
+Este projeto utiliza o Cypress para automação de testes em aplicação web. O objetivo é garantir a qualidade e a confiabilidade do sistema, executando testes de forma automatizada.
+
+## Cenários automatizados
+
+- Realização do login (Administrador e padrão)
+- Cadastro de usuário na área deslogada (Administrador e padrão)
+- Cadastro de usuário na área logada (Administrador e padrão)
+- Cadastro de produto
+- Listagem de usuários cadastrados
 
 ## Pré-requisitos
 
@@ -31,7 +39,7 @@ As seguintes dependências são utilizadas neste projeto:
   npm install cypress --save-dev
   ```
 
-- **cypress-mochawesome-reporter**: Para geração de relatórios bonitos.
+- **cypress-mochawesome-reporter**: Para geração de relatórios dos testes.
   ```bash
   npm install cypress-mochawesome-reporter --save-dev
   ```
@@ -78,7 +86,7 @@ Para rodar a automação, você pode utilizar os seguintes comandos:
 
 ## Geração de Relatórios
 
-Após a execução dos testes, você pode gerar relatórios utilizando o `cypress-mochawesome-reporter`. Os relatórios serão salvos no diretório `cypress/reports`.
+Após a execução dos testes, está sendo salvo relatórios utilizando o `cypress-mochawesome-reporter`. Os relatórios serão salvos no diretório `cypress/reports`.
 
 ## Contribuições
 

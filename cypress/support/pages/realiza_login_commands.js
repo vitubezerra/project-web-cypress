@@ -15,25 +15,25 @@ const elementos = {
     }
 }
 
-Cypress.Commands.add('realizaLoginUsuarioAdm', (email, password) => {
+Cypress.Commands.add('realizaLoginUsuarioAdm', (email, senha) => {
     cy.get(elementos.formulario.campoEmail)
         .should('be.visible')
         .type(email)
     cy.get(elementos.formulario.campoSenha)
         .should('be.visible')
-        .type(password)
+        .type(senha)
     cy.get(elementos.botoes.botaoEntrar)
         .should('be.visible')
         .click()
 });
 
-Cypress.Commands.add('realizaLoginUsuario', (email, password) => {
+Cypress.Commands.add('realizaLoginUsuario', (email, senha) => {
     cy.get(elementos.formulario.campoEmail)
         .should('be.visible')
         .type(email)
     cy.get(elementos.formulario.campoSenha)
         .should('be.visible')
-        .type(password)
+        .type(senha)
     cy.get(elementos.botoes.botaoEntrar)
         .should('be.visible')
         .click()
@@ -57,12 +57,12 @@ Cypress.Commands.add('validaLoginUsuario', () => {
         .contains('Home')
 })
 
-Cypress.Commands.add('validaPrimeiroLoginUsuarioAdm', (name) => {
+Cypress.Commands.add('validaPrimeiroLoginUsuarioAdm', (nome) => {
     cy.get(elementos.pagina.paginaValidacao)
         .should('exist')
         .and('be.visible')
     cy.get(elementos.pagina.paginaValidacao)
-        .contains(`Bem Vindo ${name}`)
+        .contains(`Bem Vindo ${nome}`)
 })
 
 Cypress.Commands.add('validaPrimeiroLoginUsuario', () => {
@@ -91,12 +91,12 @@ Cypress.Commands.add('validaLoginUsuario', () => {
         .contains('Home')
 })
 
-Cypress.Commands.add('validaPrimeiroLoginUsuarioAdm', (name) => {
+Cypress.Commands.add('validaPrimeiroLoginUsuarioAdm', (nome) => {
     cy.get(elementos.pagina.paginaValidacao)
         .should('exist')
         .and('be.visible')
     cy.get(elementos.pagina.paginaValidacao)
-        .contains(`Bem Vindo ${name}`)
+        .contains(`Bem Vindo ${nome}`)
 })
 
 Cypress.Commands.add('validaPrimeiroLoginUsuario', () => {
